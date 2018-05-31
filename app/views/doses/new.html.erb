@@ -1,3 +1,5 @@
+<div class="container">
+  <div class="text-center">
 <h1>Add your doses</h1>
 
 
@@ -6,12 +8,18 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :description %>
+    <div class="desc">
+      <%= f.input :description %>
+    </div>
+    <div class="ing">
     <%= f.association :ingredient %>
+    </div>
   </div>
+
 
   <div>
-    <%= f.button :submit %>
+    <%= f.button :submit, class: 'btn btn-primary' %>
   </div>
 <% end %>
-
+</div>
+</div>

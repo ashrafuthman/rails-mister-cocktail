@@ -28,8 +28,26 @@
 #name {
   margin-right: 40px;
   margin-bottom: 100px;
+  align-items: center;
 }
 
-a {
+.card_name:hover {
   text-decoration: none;
+
+}
+
+.file.optional {
+  text-align: center !important;
+    width: 300px;
+  margin: 10px auto;
+}
+
+
+.ing {
+  padding: 10px;
+}
+
+.desc {
+    padding: 10px;
+
 }
