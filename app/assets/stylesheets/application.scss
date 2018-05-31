@@ -1,0 +1,35 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "layouts/index";
+@import "components/index";
+@import "pages/index";
+
+.new {
+  padding-top: 100px;
+  margin: 100px 0;
+}
+
+
+.btn {
+  margin: 10px;
+  padding-left: 10px;
+}
+
+#name {
+  margin-right: 40px;
+  margin-bottom: 100px;
+}
+
+a {
+  text-decoration: none;
+}
