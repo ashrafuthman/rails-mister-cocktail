@@ -1,24 +1,83 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RailsMisterCocktail</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>RailsMisterCocktail</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <div>  <div class="navbar-wagon">
+    <div class="navbar-wagon">
+      <!-- Logo -->
+      <div class="text-center">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-   <body>
-  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://www.omnihotels.com/blog/wp-content/uploads/2016/08/PresidentialGroup-web.jpg');">
-    <div class="banner-content">
-      <h1>Ashraf's Bar</h1>
-      <p>Please choose from our cocktails that will bring joy to your heart</p>
-    <%= link_to 'New Cocktail',new_cocktail_path, class: 'btn btn-danger' %>
+        <img src="https://image.ibb.co/eD8Osd/logo.png" alt="logo" class="logo">
+
+      </div>
+
     </div>
   </div>
+  <div>
+   <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://images.unsplash.com/photo-1513470939372-bd520e7d77db?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=43f097a3ccd2e954c546705932c3cf47');">
+    <div class="banner-content">
+      <h1>Ashraf's Bar</h1>
+      <p>
+        <span id="banner-typed-text"></span>
+      </p>
+      <div>
+       <button type="button" class="btn btn-primary fas fa-info" data-toggle="modal" data-target=".bs-example-modal-sm">How to use?</button>
 
-  <hr>
+       <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabell">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content font">
+            <ol>
+              <li>
+                Click New Cocktail
+              </li>
+              <li>
+                Name your cocktail and upload picture of your cocktail
+
+              </li>
+              <li>
+
+                Add the doses of your cocktail
+              </li>
+              <li>
+                You have your cocktail on the website
+
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= link_to 'New Cocktail',new_cocktail_path, class: 'btn btn-success fas fa-plus' %>
+  </div>
 </div>
-    <%= yield %>
-  </body>
+</div>
+</div>
+
+<%= yield %>
+<div>
+  <div class="footer">
+    <div class="footer-links">
+      <a href="https://github.com/ashrafuthman"><i class="fab fa-github"></i></a>
+      <a href="https://www.facebook.com/ashraf.uthman.9"><i class="fab fa-facebook-f"></i></i></a>
+      <a href="https://www.linkedin.com/in/ashraf-uthman-47b56715a/"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      This footer is made with <i class="fa fa-heart"></i> at Le Wagon
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag "application" %>
+<%= javascript_pack_tag "application" %>
+</div>
+
+</body>
 </html>
+
