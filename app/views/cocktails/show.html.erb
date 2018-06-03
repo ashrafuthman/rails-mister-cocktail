@@ -10,13 +10,13 @@
   </td>
    <td><%= dose.description %> <%= link_to "Delete", cocktail_dose_path(@cocktail, dose),
       method: :delete,
-      data: { confirm: "Are you sure?" } %>
+      data: { confirm: "Are you sure?" }, class: 'link' %>
  </td>
  <% end %>
  </table>
  <hr>
 <%= link_to "Add doses to your cocktail", new_cocktail_dose_path(@cocktail), class: 'btn btn-success' %>
 <hr>
-<%= link_to "Back to the list", cocktails_path %>
+<%= link_to "Back to the list", cocktails_path, class: 'link2' %>
   </div>
 </div>
