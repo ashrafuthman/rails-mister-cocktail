@@ -12,7 +12,7 @@ function loadDynamicBannerText() {
      "The strongest beer in the world has a 67.5% alcohol content.",
      "In the U.K., it is legal for kids over 5 years old to drink alcohol at home or on other private premises.",
      "Amsterdam pays alcoholics in beer to clean streets: 5 cans of beer for a day's work, plus €10 and tobacco."],
-    typeSpeed: 50,
+    typeSpeed: 65,
     loop: true
   });
 }

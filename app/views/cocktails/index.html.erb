@@ -3,15 +3,18 @@
   <div class="container">
     <div class="row">
         <% @cocktails.each do |c| %>
+           <%= link_to cocktail_path(c) do %>
           <div class="col-xs-12 col-sm-6 col-md-3">
-           <div class="card"
+           <div class="card card-link"
            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
            url(<%= c.photo %>)">
             <div class="card-description">
-              <h2><%= link_to c.name, cocktail_path(c), class: 'card_name' %></h2>
+              <h2><%= c.name %></h2>
             </div>
+
           </div>
         </div>
+        <% end %>
         <% end %>
     </div>
 </div>
