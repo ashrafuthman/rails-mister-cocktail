@@ -1,25 +1,41 @@
 <div class="container">
   <div class="text-center">
+<div class="title-photo">
+<h1>Cocktails <%= @cocktail.name %></h1>
+<%= cl_image_tag( @cocktail.photo ,
+      width: 400, height: 300, crop: :fill) %>
+  </div>
+
 <h1>Add your doses</h1>
-
-
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <div class="desc">
+<div class="form-inputs">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <div class="desc">
       <%= f.input :description %>
+      </div>
     </div>
-    <div class="ing">
-    <%= f.association :ingredient %>
     </div>
-  </div>
-
-
-  <div>
-    <%= f.button :submit, class: 'btn btn-primary' %>
+    <div class="col-md-6 col-sm-12">
+      <div class="ing">
+        <%= f.association :ingredient %>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12">
+      <div>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      </div>
+    </div>
   </div>
 <% end %>
 </div>
 </div>
+
+
+
+
+
+
+

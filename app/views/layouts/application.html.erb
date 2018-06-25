@@ -10,69 +10,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
-  <div>  <div class="navbar-wagon">
-    <div class="navbar-wagon">
-      <!-- Logo -->
-      <div class="text-center">
-        <%= link_to (image_tag "logo.png", class: 'logo'), cocktails_path %>
-      </div>
-
-    </div>
-  </div>
-  <div>
-   <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://images.unsplash.com/photo-1513470939372-bd520e7d77db?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=43f097a3ccd2e954c546705932c3cf47');">
-    <div class="banner-content">
-      <h1>Ashraf's Bar</h1>
-      <p>
-        <span id="banner-typed-text"></span>
-      </p>
-      <div>
-       <button type="button" class="btn btn-primary fas fa-info" data-toggle="modal" data-target=".bs-example-modal-sm">How to use?</button>
-
-       <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabell">
-        <div class="modal-dialog modal-sm" role="document">
-          <div class="modal-content font">
-            <ol>
-              <li>
-                Click New Cocktail
-              </li>
-              <li>
-                Name your cocktail and upload picture of your cocktail
-
-              </li>
-              <li>
-
-                Add the doses of your cocktail
-              </li>
-              <li>
-                You have your cocktail on the website
-
-              </li>
-               <h5 class="font" style="font-weight: bolder;">Press the Logo on the top to go back to the home page</h3>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
-    <%= link_to 'New Cocktail',new_cocktail_path, class: 'btn btn-success fas fa-plus' %>
-  </div>
-</div>
-</div>
-</div>
-
+  <%= render 'shared/navbar' %>
 <%= yield %>
-<div>
-  <div class="footer">
-    <div class="footer-links">
-      <a href="https://github.com/ashrafuthman"><i class="fab fa-github"></i></a>
-      <a href="https://www.facebook.com/ashraf.uthman.9"><i class="fab fa-facebook-f"></i></i></a>
-      <a href="https://www.linkedin.com/in/ashraf-uthman-47b56715a/"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <div class="footer-copyright">
-      This footer is made with <i class="fa fa-heart"></i> at Le Wagon
-    </div>
-  </div>
-</div>
+  <%= render 'shared/footer' %>
 <%= javascript_include_tag "application" %>
 <%= javascript_pack_tag "application" %>
 </div>
