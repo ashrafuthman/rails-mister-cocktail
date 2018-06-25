@@ -1,3 +1,4 @@
+<div class="wrapper">
 <div class="container">
   <div class="text-center">
   <div class="title-photo">
@@ -10,6 +11,7 @@
 
  <div class="doses-t">
  <table>
+  <div class="thead">
   <tr>
     <th>
       <h4>
@@ -22,21 +24,25 @@
       </h4>
     </th>
   </tr>
+  </div>
  <% @cocktail.doses.each do |dose| %>
+  <div class="tdetails">
   <tr>
-
   <td>
     <h5> <%= dose.ingredient.name %></h5>
   </td>
    <td>
     <h5>
-     <%= dose.description %> <%= link_to "Delete", cocktail_dose_path(@cocktail, dose),
+     <%= dose.description %> <%= link_to cocktail_dose_path(@cocktail, dose),
       method: :delete,
-      data: { confirm: "Are you sure?" }, class: 'link' %>
+      data: { confirm: "Are you sure?" }, class: 'link' do%>
+      <i class="fas fa-trash-alt delete-dose"></i>
+      <% end %>
     </h5>
  </td>
  <% end %>
   </tr>
+  </div>
  </table>
  </div>
  <hr>
@@ -44,4 +50,5 @@
 <hr>
 <%= link_to "Back to the list", cocktails_path, class: 'link2' %>
   </div>
+</div>
 </div>

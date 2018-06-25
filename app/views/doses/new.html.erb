@@ -1,15 +1,16 @@
+<div class="wrapper">
 <div class="container">
   <div class="text-center">
 <div class="title-photo">
 <h1>Cocktails <%= @cocktail.name %></h1>
 <%= cl_image_tag( @cocktail.photo ,
-      width: 400, height: 300, crop: :fill) %>
+      width: 400, height: 300, crop: :fill, class: "img-rad", style: "background: linear-gradient(purple, black);") %>
   </div>
 
 <h1>Add your doses</h1>
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence, class: "error alert alert-danger" if f.object.errors[:base].present? %>
 <div class="form-inputs">
   <div class="row">
     <div class="col-md-6 col-sm-12">
@@ -32,10 +33,4 @@
 <% end %>
 </div>
 </div>
-
-
-
-
-
-
-
+</div>

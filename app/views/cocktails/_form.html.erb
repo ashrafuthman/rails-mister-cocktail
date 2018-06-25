@@ -1,3 +1,4 @@
+<div class="wrapper">
 <div class="container">
   <div class="text-center">
     <div class="form-container">
@@ -6,13 +7,13 @@
     </div>
     <%= simple_form_for(@cocktail) do |f| %>
     <%= f.error_notification %>
-    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?%>
       <div class="c-name">
         <%= f.input :name %>
       </div>
       <div class="c-photo">
-        <%= f.input :photo, label: false, placeholder: "Upload Photo" %>
-        <%= f.input :photo_cache, as: :hidden%>
+        <%= f.input :photo, label: false, class: "form-text" %>
+        <%= f.input :photo_cache, as: :hidden, class: "form-text"%>
       </div>
       <div class="c-submit">
         <%= f.button :submit, class: 'btn btn-primary'%>
@@ -21,4 +22,4 @@
     </div>
   </div>
 </div>
-
+</div>

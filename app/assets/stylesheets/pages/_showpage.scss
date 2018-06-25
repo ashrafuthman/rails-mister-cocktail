@@ -4,4 +4,51 @@
 
 .img-rad {
   border-radius: 3px;
+  background: linear-gradient(purple, black);
+
+}
+.title-photo img {
+  background: linear-gradient(purple, black);
+}
+.wrapper {
+  background-image: linear-gradient(transparent, transparent, #323145), url("https://res.cloudinary.com/jerrick/image/upload/f_gif,fl_progressive,q_auto/leg1cbc5ifdr9tkkqn5q.gif");
+}
+
+.form-text {
+  color: white;
+}
+
+.doses-t {
+  display: flex;
+  justify-content: center;
+}
+.error {
+ color: red;
+}
+
+
+
+.doses-t h5, h3, h2, h1{
+ color: white;
+}
+
+.doses-t h4 {
+ color: #ae0000;
+}
+
+
+.delete-dose:hover {
+  color: red;
+}
+
+.delete-dose {
+  color: #aaa;
+}
+
+label {
+  color: white;
+}
+
+input {
+  color: white;
 }
