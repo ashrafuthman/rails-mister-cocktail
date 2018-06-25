@@ -1,24 +1,26 @@
 <div class="container">
   <div class="text-center">
-    <div class="form-container">
-    <div class="c-title">
-      <h1>Create your own cocktail</h1>
-    </div>
+
+    <h1>Create your own cocktail</h1>
+
     <%= simple_form_for(@cocktail) do |f| %>
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-      <div class="c-name">
+
+
+
+
         <%= f.input :name %>
-      </div>
-      <div class="c-photo">
-        <%= f.input :photo, label: false, placeholder: "Upload Photo" %>
+        <%= f.input :photo, label: false %>
         <%= f.input :photo_cache, as: :hidden%>
-      </div>
-      <div class="c-submit">
+
+
+
         <%= f.button :submit, class: 'btn btn-primary'%>
+
       </div>
-    <% end %>
+
     </div>
+    <% end %>
   </div>
 </div>
-

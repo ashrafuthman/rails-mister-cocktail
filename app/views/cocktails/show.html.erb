@@ -1,19 +1,44 @@
 <div class="container">
   <div class="text-center">
-
+  <div class="title-photo">
 <h1>Cocktails <%= @cocktail.name %></h1>
+
+<%= cl_image_tag( @cocktail.photo ,
+      width: 400, height: 300, crop: :fill, class: "img-rad")%>
+  </div>
 <br>
- <% @cocktail.doses.each do |dose| %>
+
+ <div class="doses-t">
  <table>
+  <tr>
+    <th>
+      <h4>
+        Ingredient
+      </h4>
+    </th>
+    <th>
+      <h4>
+        Description
+      </h4>
+    </th>
+  </tr>
+ <% @cocktail.doses.each do |dose| %>
+  <tr>
+
   <td>
-    <%= dose.ingredient.name %>
+    <h5> <%= dose.ingredient.name %></h5>
   </td>
-   <td><%= dose.description %> <%= link_to "Delete", cocktail_dose_path(@cocktail, dose),
+   <td>
+    <h5>
+     <%= dose.description %> <%= link_to "Delete", cocktail_dose_path(@cocktail, dose),
       method: :delete,
       data: { confirm: "Are you sure?" }, class: 'link' %>
+    </h5>
  </td>
  <% end %>
+  </tr>
  </table>
+ </div>
  <hr>
 <%= link_to "Add doses to your cocktail", new_cocktail_dose_path(@cocktail), class: 'btn btn-success' %>
 <hr>
