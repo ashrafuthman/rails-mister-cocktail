@@ -1,54 +1,54 @@
 <div class="wrapper">
-<div class="container">
-  <div class="text-center">
-  <div class="title-photo">
-<h1>Cocktails <%= @cocktail.name %></h1>
+  <div class="container">
+    <div class="text-center">
+      <div class="title-photo">
+        <h1>Cocktails <%= @cocktail.name %></h1>
 
-<%= cl_image_tag( @cocktail.photo ,
-      width: 400, height: 300, crop: :fill, class: "img-rad")%>
-  </div>
-<br>
+        <%= cl_image_tag( @cocktail.photo ,
+        width: 400, height: 300, crop: :fill, class: "img-rad")%>
+      </div>
+      <br>
 
- <div class="doses-t">
- <table>
-  <div class="thead">
-  <tr>
-    <th>
-      <h4>
-        Ingredient
-      </h4>
-    </th>
-    <th>
-      <h4>
-        Description
-      </h4>
-    </th>
-  </tr>
-  </div>
- <% @cocktail.doses.each do |dose| %>
-  <div class="tdetails">
-  <tr>
-  <td>
-    <h5> <%= dose.ingredient.name %></h5>
-  </td>
-   <td>
-    <h5>
-     <%= dose.description %> <%= link_to cocktail_dose_path(@cocktail, dose),
-      method: :delete,
-      data: { confirm: "Are you sure?" }, class: 'link' do%>
-      <i class="fas fa-trash-alt delete-dose"></i>
-      <% end %>
-    </h5>
- </td>
- <% end %>
-  </tr>
-  </div>
- </table>
+      <div class="doses-t">
+       <table>
+        <div class="thead">
+          <tr>
+            <th>
+              <h4>
+                Ingredient
+              </h4>
+            </th>
+            <th>
+              <h4>
+                Description
+              </h4>
+            </th>
+          </tr>
+        </div>
+        <% @cocktail.doses.each do |dose| %>
+        <div class="tdetails">
+          <tr>
+            <td>
+              <h5> <%= dose.ingredient.name %></h5>
+            </td>
+            <td>
+              <h5>
+               <%= dose.description %> <%= link_to cocktail_dose_path(@cocktail, dose),
+               method: :delete,
+               data: { confirm: "Are you sure?" }, class: 'link' do%>
+               <i class="fas fa-trash-alt delete-dose"></i>
+               <% end %>
+             </h5>
+           </td>
+           <% end %>
+         </tr>
+       </div>
+     </table>
+   </div>
+   <hr>
+   <%= link_to "Add doses to your cocktail", new_cocktail_dose_path(@cocktail), class: 'btn btn-success' %>
+   <hr>
+   <%= link_to "Back to the list", cocktails_path, class: 'link2' %>
  </div>
- <hr>
-<%= link_to "Add doses to your cocktail", new_cocktail_dose_path(@cocktail), class: 'btn btn-success' %>
-<hr>
-<%= link_to "Back to the list", cocktails_path, class: 'link2' %>
-  </div>
 </div>
 </div>
